@@ -265,7 +265,7 @@
             window.addEventListener("load", function () {
                 setTimeout(function () {
                     document.querySelector(".popup").style.display = "block";
-                }, 1000);
+                }, 6000);
             });
 
             document.querySelector("#close").addEventListener("click", function () {

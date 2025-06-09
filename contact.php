@@ -39,17 +39,17 @@
                             <h2 class="title mb-0">Leave A Reply</h2>
                             <p class="mb-30 mt-10">Fill-up The Form and Message us of your amazing question</p>
                             <div class="request-form">
-                                <form action="https://html.rrdevs.net/edcare/mail.php" method="post" id="ajax_contact" class="form-horizontal">
+                                <form id="careerForm" class="form-horizontal">
                                     <div class="form-group row">
                                         <div class="col-md-6">
                                             <div class="form-item">
-                                                <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Your Name" />
+                                                <input type="text" id="fullname" name="fullName" class="form-control" placeholder="Your Full Name" required/>
                                                 <div class="icon"><i class="fa-regular fa-user"></i></div>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-item">
-                                                <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" />
+                                                <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required/>
                                                 <div class="icon"><i class="fa-sharp fa-regular fa-envelope"></i></div>
                                             </div>
                                         </div>
@@ -57,25 +57,27 @@
                                     <div class="form-group row">
                                         <div class="col-md-12">
                                             <div class="form-item">
-                                                <select name="subject" id="subject" class="niceSelect select-control form-control">
-                                                    <option value="">Select Subject</option>
-                                                    <option value="2">Plan 1</option>
-                                                    <option value="3">Plan 2</option>
-                                                    <option value="4">Plan 3</option>
-                                                </select>
+                                                <input type="nember" id="number" name="phoneNumber" class="form-control" placeholder="Contact Number" required/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <div class="form-item">
+                                                <input type="text" id="subject" name="subject" class="form-control" placeholder="Your Subject" required/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-md-12">
                                             <div class="form-item message-item">
-                                                <textarea id="message" name="message" cols="30" rows="5" class="form-control address" placeholder="Message"></textarea>
+                                                <textarea id="message" name="message" cols="30" rows="5" class="form-control address" placeholder="Message" required></textarea>
                                                 <div class="icon"><i class="fa-light fa-messages"></i></div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="submit-btn">
-                                        <button id="submit" class="ed-primary-btn" type="submit">Submit Message</button>
+                                        <button id="submit" class="ed-primary-btn" name="submit" type="submit">Submit Message</button>
                                     </div>
                                 </form>
                                 <div id="form-messages" class="alert mt-20"></div>
@@ -127,6 +129,76 @@
         <!-- ./ contact-section -->
 
         <?php include "temp/footer.php" ?>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <script>
+            // Add event listener to form submission
+            document.getElementById("careerForm").addEventListener("submit", function(e) {
+                e.preventDefault(); // Prevent default form submission
+                showWaitingMessageAndSendRequest();
+            });
+
+            function showWaitingMessageAndSendRequest() {
+                Swal.fire({
+                    title: 'Submitting...',
+                    text: 'Please wait while we process your application.',
+                    allowOutsideClick: false,
+                    didOpen: () => {
+                        Swal.showLoading();
+                    }
+                });
+                sendApplicationRequest();
+            }
+
+            function sendApplicationRequest() {
+                let formData = new FormData(document.getElementById("careerForm"));
+                // console.log("Sending form data:", Object.fromEntries(formData.entries()));
+                
+                fetch("temp/Broker.class.php", {
+                    method: "POST",
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // console.log("Response Data:", data);
+                    if (data.success) {
+                        showSuccessMessage();
+                    } else {
+                        showErrorMessage(data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error("Fetch Error:", error);
+                    showErrorMessage("An unexpected error occurred. Please try again later.");
+                });
+            }
+
+            function showSuccessMessage() {
+                Swal.fire({
+                    icon: "success",
+                    title: "Application Submitted!",
+                    text: "Our team will review your application and get back to you.",
+                    confirmButtonText: 'OK',
+                }).then(() => {
+                    // Clear the form if needed
+                    document.getElementById("careerForm").reset();
+                });
+            }
+
+            function showErrorMessage(message) {
+                Swal.fire({
+                    icon: "error",
+                    title: "Submission Failed",
+                    text: message,
+                    confirmButtonText: 'OK',
+                }).then(() => {
+                    // Clear the form if needed
+                    document.getElementById("careerForm").reset();
+                });
+            }
+        </script>
 
     </body>
 </html>
