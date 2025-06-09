@@ -45,7 +45,7 @@ START: Default CSS
   --ed-color-common-black: #000000;
   --ed-color-heading-primary: #162726;
   --ed-color-text-body: #6C706F;
-  --ed-color-theme-primary: #07A698;
+  --ed-color-theme-primary: #2196F3;
   --ed-color-grey-1: #F2F4F7;
   --ed-color-grey-2: #F2F4F7;
   --ed-color-bg-1: #0E121D;
@@ -458,7 +458,7 @@ ul {
   width: 142px;
   height: 142px;
   border-radius: 50%;
-  background: radial-gradient(farthest-side, #07a698 94%, rgba(0, 0, 0, 0)) top/15.5px 15.5px no-repeat, conic-gradient(rgba(0, 0, 0, 0) 30%, #07a698);
+  background: radial-gradient(farthest-side, #2196F3 94%, rgba(0, 0, 0, 0)) top/15.5px 15.5px no-repeat, conic-gradient(rgba(0, 0, 0, 0) 30%, #2196F3);
   -webkit-mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 15.5px), #000 0);
   animation: spinner-c7wet2 1.2s infinite linear;
 }
@@ -2526,7 +2526,7 @@ START: Header CSS
 .header .primary-header-inner .header-menu-wrap .sub-menu li ul {
   background-color: var(--ed-color-common-white);
   display: block;
-  width: 220px;
+  width: 300px;
   padding: 0;
   box-shadow: 0px 50px 100px 0px rgba(64, 1, 4, 0.1), 0px -6px 0px 0px rgba(248, 99, 107, 0.004);
   position: absolute;
@@ -8879,7 +8879,7 @@ START: Page Header CSS
 START: Page Header CSS
 ----------------------------------------*/
 .testimonial-section {
-  background-color: #07A698;
+  background-color: #2196F3;
   position: relative;
   z-index: 1;
 }
@@ -10661,7 +10661,7 @@ START: Theme Slider CSS
 }
 .slider-item .slider-content-wrap .slider-content .sub-heading-wrap .sub-heading {
   background: rgba(255, 255, 255, 0.01);
-  border: 1px solid #07A698;
+  border: 1px solid #2196F3;
   -webkit-backdrop-filter: blur(40px);
           backdrop-filter: blur(40px);
   border-radius: 100px;
@@ -11940,7 +11940,7 @@ START: Home 6 CSS
   }
 }
 .hero-section-6 .bg-item .bg-overlay {
-  background: linear-gradient(90deg, #07A698 30.56%, rgba(5, 47, 43, 0) 81.23%);
+  background: linear-gradient(90deg, #2196F3 30.56%, rgba(5, 47, 43, 0) 81.23%);
   transform: matrix(-1, 0, 0, 1, 0, 0);
   position: absolute;
   width: 100%;
@@ -11952,7 +11952,7 @@ START: Home 6 CSS
 }
 @media (max-width: 1200px) {
   .hero-section-6 .bg-item .bg-overlay {
-    background-color: #07A698;
+    background-color: #2196F3;
     width: 100%;
     right: 0;
     opacity: 0.8;
@@ -12768,7 +12768,7 @@ START: Home 6 CSS
      object-fit: cover;
 }
 .footer-insta-area .footer-insta-item .overlay {
-  background-color: #07A698;
+  background-color: #2196F3;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -13067,7 +13067,7 @@ START: Home 8 CSS
   overflow: hidden;
 }
 .cat-item .shape {
-  background: #07A698;
+  background: #2196F3;
   filter: blur(50px);
   height: 157px;
   width: 157px;
@@ -13635,7 +13635,7 @@ START: Home 8 CSS
   z-index: 1;
 }
 .choose-us-wrap .line {
-  background: linear-gradient(90deg, rgba(7, 166, 152, 0) 0%, #07A698 50.39%, rgba(7, 166, 152, 0) 99.69%);
+  background: linear-gradient(90deg, rgba(7, 166, 152, 0) 0%, #2196F3 50.39%, rgba(7, 166, 152, 0) 99.69%);
   width: 100%;
   height: 4px;
   position: absolute;
@@ -13665,7 +13665,7 @@ START: Home 8 CSS
   }
 }
 .choose-use-item .line-shape {
-  background: linear-gradient(360deg, rgba(7, 166, 152, 0) 0%, #07A698 100%);
+  background: linear-gradient(360deg, rgba(7, 166, 152, 0) 0%, #2196F3 100%);
   height: 94px;
   width: 4px;
   position: absolute;
@@ -14367,7 +14367,7 @@ START: Home 9 CSS
   right: -150px;
   height: 288px;
   width: 288px;
-  background: #07A698;
+  background: #2196F3;
   filter: blur(125px);
 }
 .cat-item-2 .icon {
@@ -15535,7 +15535,7 @@ START: Home 11 CSS
   }
 }
 .offer-nav .nav-item .nav-link .offer-tab-btn:before {
-  background: linear-gradient(90deg, #07A698 0%, #162726 100%);
+  background: linear-gradient(90deg, #2196F3 0%, #162726 100%);
   content: "";
   width: 100%;
   height: 100%;
@@ -15939,7 +15939,7 @@ START: Home 12 CSS
   }
 }
 .fd-wrap .round-shape {
-  background: #07A698;
+  background: #2196F3;
   filter: blur(125px);
   height: 799px;
   width: 799px;
@@ -16422,7 +16422,7 @@ START: Home 13 CSS
      object-fit: cover;
 }
 .hero-wrap-13 .hero-img-wrap-13 .round-shape {
-  background: #07A698;
+  background: #2196F3;
   filter: blur(225px);
   height: 400px;
   width: 400px;
@@ -16747,7 +16747,7 @@ START: Home 13 CSS
   border-radius: 15px 15px 0 0;
 }
 .team-item-13 .team-img-wrap .round-shape {
-  background: #07A698;
+  background: #2196F3;
   filter: blur(50px);
   height: 127px;
   max-width: 355px;
@@ -16845,10 +16845,10 @@ START: Home 13 CSS
   }
 }
 .team-counter-wrap .team-counter {
-  display: grid;
-  align-items: center;
-  grid-template-columns: 50px 1fr;
-  grid-gap: 20px;
+  /* display: grid; */
+  /* align-items: center; */
+  /* grid-template-columns: 50px 1fr; */
+  /* grid-gap: 20px; */
   padding: 75px 0;
 }
 @media only screen and (max-width: 992px) {
@@ -16862,14 +16862,14 @@ START: Home 13 CSS
   }
 }
 .team-counter-wrap .team-counter:not(:last-of-type) {
-  padding-right: 60px;
-  margin-right: 60px;
+  padding-right: 30px;
+  margin-right: 30px;
   border-right: 1px solid #E0E5EB;
 }
 @media (max-width: 1200px) {
   .team-counter-wrap .team-counter:not(:last-of-type) {
-    padding-right: 30px;
-    margin-right: 30px;
+    padding-right: 20px;
+    margin-right: 20px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -16880,7 +16880,7 @@ START: Home 13 CSS
   }
 }
 .team-counter-wrap .team-counter .content .title {
-  font-size: 36px;
+  font-size: 20px;
   line-height: 1;
   color: var(--ed-color-theme-primary);
   display: flex;
@@ -16893,7 +16893,7 @@ START: Home 13 CSS
 }
 .team-counter-wrap .team-counter .content p {
   font-size: 14px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: var(--ed-color-heading-primary);
   font-weight: 500;
   margin-bottom: 0;
@@ -16972,6 +16972,7 @@ START: Home 13 CSS
 }
 .testi-item-13 .testi-top-content {
   padding: 40px;
+  background-color: #FFF;
 }
 @media (max-width: 1200px) {
   .testi-item-13 .testi-top-content {
@@ -18424,7 +18425,7 @@ START: Home 16 CSS
 
 .hero-wrap-16 {
   padding: 90px;
-  background: linear-gradient(270deg, #07A698 0%, #03403B 81.33%);
+  background: linear-gradient(270deg, #2196F3 0%, #03403B 81.33%);
   border-radius: 15px;
   overflow: hidden;
   position: relative;
@@ -20401,7 +20402,7 @@ START: Home 18 CSS
   }
 }
 .team-item-18 .round-shape {
-  background: #07A698;
+  background: #2196F3;
   filter: blur(125px);
   position: absolute;
   width: 444px;
@@ -22173,7 +22174,7 @@ START: Home 21 CSS
   }
 }
 .popular-item-2 .shape-1 {
-  background: #07A698;
+  background: #2196F3;
   opacity: 0.42;
   filter: blur(125px);
   position: absolute;
